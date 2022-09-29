@@ -22,6 +22,16 @@
         <br />
         We wish you a pleasant day.
       </p>
+
+      // v-bind per element method
+      <img v-bind="imgAttrs">
+      <br><br><br>
+      <p>Image Größe wird in Vue definiert</p>
+      <img 
+      class ="border-primary"
+      :src= "`https://picsum.photos/${width}/${height}`" 
+      alt="Something random from picsum">
+      
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
