@@ -22,8 +22,8 @@
         <br />
         We wish you a pleasant day.
       </p>
-
-      // v-bind per element method
+<hr>
+<!-- v-bind per element method -->
       <img v-bind="imgAttrs">
       <br><br><br>
       <p>Image Größe wird in Vue definiert</p>
@@ -32,6 +32,50 @@
       :src= "`https://picsum.photos/${width}/${height}`" 
       alt="Something random from picsum">
       
+<!-- v-for mit Basic Array -->
+      <hr>
+      <h1>v-for mit Basic Array</h1>
+      <h2>Fruits in the Basket      </h1>
+        <ul>
+          <li v-for="fruit in fruits" :key="fruit">{{fruit}}</li>
+        </ul>
+
+        <!-- v-for mit Basic Array mit index -->
+      <hr>
+      <h1>v-for mit Basic Array mit index</h1>
+      <h2>Fruits in the Basket      </h1>
+        <ul>
+          <li v-for="(fruit, index) in fruits" :key="fruit">
+            {{index}} - {{fruit}}</li>
+        </ul>
+
+
+ <!-- v-for mit object literal -->  
+      <h1>v-for mit object literal</h1>
+      <h2>Fruits in the Basket Emojis</h1>
+        <ul>
+          <li v-for="(emoji, name) in fruitsObjects" :key="name"> {{emoji}} - <strong>{{name}}</strong></li>
+        </ul>
+                <hr>
+
+         <!-- v-for mit json ähnlichen Daten-->  
+      <h1>v-for mit json ähnlichen Daten</h1>
+      <h2>Fruits in the Basket Json</h1>
+        <ul>
+          <li v-for="(fruit, index) in fruitsJson" :key="fruit.id">
+            {{index}}-{{fruit.emoji}} - <strong>{{fruit.name}}</strong>-
+          </li>
+        </ul>
+
+                 <!-- v-for mit json ähnlichen Daten mit index-->  
+      <h1>v-for mit json ähnlichen Daten mit index</h1>
+      <h2>Fruits in the Basket Json</h1>
+        <ul>
+          <li v-for="(fruit, index) in fruitsJson" :key="fruit.id">
+            {{index}}-{{fruit.emoji}} - <strong>{{fruit.name}}</strong>-
+          </li>
+        </ul>
+
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
